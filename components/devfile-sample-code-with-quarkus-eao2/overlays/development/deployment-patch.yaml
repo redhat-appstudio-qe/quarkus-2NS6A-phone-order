@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-code-with-quarkus-eao2
+  namespace: e2e-demos-huvo-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images-protected@sha256:2b2e8cacd37eb56607099210e15d2849a7ae3e250da29142528ca5a12e5bbc69
+        name: my-java-quarkus
+        resources: {}
+status: {}
